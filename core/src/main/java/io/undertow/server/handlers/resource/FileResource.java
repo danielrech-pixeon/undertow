@@ -79,7 +79,7 @@ public class FileResource implements Resource {
 
     @Override
     public ETag getETag() {
-        return null;
+        return new ETag(true, file.length() + "-" + file.lastModified());
     }
 
     @Override
